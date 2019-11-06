@@ -1,0 +1,30 @@
+<div style="padding: 13px;">
+  <mat-spinner *ngIf="busses.length === 0" diameter="200" style="margin:0 auto;"></mat-spinner>
+<!--
+  <mat-card *ngFor="let bus of busses" style="margin-top:10px;">
+      <mat-card-header> -->
+          <!-- <mat-card-title>{{bus.stopid}}</mat-card-title> -->
+          <!-- <h2>Bus Information for Stop {{bus.stopid}}</h2> -->
+          <!-- to do: add stop number to title -->
+          <!-- to do: add input field to act as parameter for specific bus stop -->
+          <!-- <mat-card-subtitle></mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content> -->
+        <div *ngFor="let bus of busses">
+        <table class="table">
+          <!-- <th>Destination</th>
+          <th>Due In</th> -->
+          <tr>
+            <td>{{bus.destination}} </td>
+            <td>{{bus.destinationlocalized}} </td>
+            <td>{{bus.duetime}} Mins</td>
+          </tr>
+        </table>
+          <!-- <p>
+              {{bus.destination}}
+          </p>
+          <p>
+              {{bus.duetime}}
+          </p> -->
+        </div>
+</div>
